@@ -15,6 +15,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <!-- profile-stats:start -->
-[![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=freeloadsk)](https://github.com/stats-organization/github-stats-extended)
-[![freeloadsk's GitHub stats](https://github-stats-extended.vercel.app/api?username=freeloadsk)](https://github.com/stats-organization/github-stats-extended)
+[![GitHub Stats](./profile/stats.svg)](./docs/profile-stats.md)
+[![Top Languages](./profile/top-langs.svg)](./docs/profile-stats.md)
 <!-- profile-stats:end -->

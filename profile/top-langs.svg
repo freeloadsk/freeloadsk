@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img" aria-labelledby="title subtitle">
+  <title id="title">Most Used Languages</title>
+  <desc id="subtitle">Original owned repositories · public + accessible private</desc>
+  <style>
+    :root { color-scheme: light dark; --bg:#ffffff; --line:#d0d7de; --text:#1f2328; --muted:#59636e; --accent:#0969da; --track:#eaeef2; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0d1117; --line:#30363d; --text:#e6edf3; --muted:#9198a1; --accent:#58a6ff; --track:#21262d; } }
+    text { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:13px; fill:var(--text); }
+    .title { font-size:19px; font-weight:650; fill:var(--accent); }
+    .muted { fill:var(--muted); font-size:11px; }
+    .value { font-weight:650; font-variant-numeric:tabular-nums; }
+  </style>
+  <rect x="0.5" y="0.5" width="479" height="299" rx="12" fill="var(--bg)" stroke="var(--line)"/>
+  <text x="24" y="37" class="title">Most Used Languages</text>
+  <text x="24" y="60" class="muted">Original owned repositories · public + accessible private</text>
+  <text x="24" y="90">Python</text>
+  <text x="456" y="90" text-anchor="end" class="value">94.1%</text>
+  <rect x="24" y="98" width="432" height="5" rx="2.5" fill="var(--track)"/>
+  <rect x="24" y="98" width="406.42" height="5" rx="2.5" fill="#3572A5"/>
+  <text x="24" y="122">JavaScript</text>
+  <text x="456" y="122" text-anchor="end" class="value">4.0%</text>
+  <rect x="24" y="130" width="432" height="5" rx="2.5" fill="var(--track)"/>
+  <rect x="24" y="130" width="17.37" height="5" rx="2.5" fill="#f1e05a"/>
+  <text x="24" y="154">CSS</text>
+  <text x="456" y="154" text-anchor="end" class="value">1.0%</text>
+  <rect x="24" y="162" width="432" height="5" rx="2.5" fill="var(--track)"/>
+  <rect x="24" y="162" width="4.53" height="5" rx="2.5" fill="#663399"/>
+  <text x="24" y="186">HTML</text>
+  <text x="456" y="186" text-anchor="end" class="value">0.8%</text>
+  <rect x="24" y="194" width="432" height="5" rx="2.5" fill="var(--track)"/>
+  <rect x="24" y="194" width="3.40" height="5" rx="2.5" fill="#e34c26"/>
+  <text x="24" y="218">Dockerfile</text>
+  <text x="456" y="218" text-anchor="end" class="value">0.1%</text>
+  <rect x="24" y="226" width="432" height="5" rx="2.5" fill="var(--track)"/>
+  <rect x="24" y="226" width="0.28" height="5" rx="2.5" fill="#384d54"/>
+</svg>
