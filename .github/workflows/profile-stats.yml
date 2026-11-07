@@ -1,0 +1,44 @@
+name: Update profile cards
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Daily at 08:00 Asia/Shanghai; GitHub may delay scheduled runs.
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+
+      - name: Verify aggregation and rendering
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Generate aggregate cards directly from GitHub
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: python3 scripts/profile_stats.py --username "$PROFILE_OWNER"
+
+      - name: Commit updated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- README.md profile/stats.svg profile/top-langs.svg
+          if git diff --cached --quiet; then
+            echo "Cards are already up to date."
+            exit 0
+          fi
+          git commit -m "docs: refresh profile statistics"
+          git push origin HEAD:main
