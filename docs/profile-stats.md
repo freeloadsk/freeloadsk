@@ -16,7 +16,6 @@ Token 到期或被撤销后，需要更新同名 Secret。失败运行不会提�
 
 ## 统计口径
 
-- 仓库数：Token 能访问的、本人拥有的公开和私有仓库，包含 fork。
 - 获得的 Star：本人拥有的非 fork 仓库的 Star 总数。
 - Commit、PR、Issue、Review：过去 365 天 GitHub `contributionsCollection` 的贡献计数，遵循 GitHub 自身的贡献归属规则；不是扫描所有分支的 Git 提交总数。贡献可以来自本人或他人的仓库。
 - 语言：本人拥有的非 fork 仓库，包含私有及归档仓库，按 GitHub 返回的语言代码字节数汇总；展示前六项，占比的分母包含所有语言。

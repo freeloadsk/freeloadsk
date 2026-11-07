@@ -61,7 +61,7 @@ class ProfileStatsTests(unittest.TestCase):
         stats, sizes, colors = cards.collect(
             "freeloadsk", "test-token", datetime(2026, 11, 7, tzinfo=timezone.utc), request
         )
-        self.assertEqual(stats["Repositories"], 3)
+        self.assertNotIn("Repositories", stats)
         self.assertEqual(stats["Stars earned"], 4)
         self.assertEqual(stats["Commits (365 days)"], 11)
         self.assertEqual(sizes, {"Python": 400})
@@ -121,7 +121,7 @@ class ProfileStatsTests(unittest.TestCase):
             readme = root / "README.md"
             before = "# Hello 👋\r\n\r\n" + cards.START + "\r\nold cards\r\n" + cards.END + "\r\nKeep me.\r\n"
             readme.write_bytes(before.encode())
-            cards.publish(root, "freeloadsk", {"Repositories": 1}, Counter(Python=10), {})
+            cards.publish(root, "freeloadsk", {"Stars earned": 1}, Counter(Python=10), {})
             after = readme.read_bytes()
             self.assertTrue(after.startswith(("# Hello 👋\r\n\r\n" + cards.START).encode()))
             self.assertTrue(after.endswith((cards.END + "\r\nKeep me.\r\n").encode()))
@@ -129,7 +129,7 @@ class ProfileStatsTests(unittest.TestCase):
             self.assertNotIn(b"old cards", after)
             for path in (root / "profile").glob("*.svg"):
                 ET.parse(path)
-            cards.publish(root, "freeloadsk", {"Repositories": 1}, Counter(Python=10), {})
+            cards.publish(root, "freeloadsk", {"Stars earned": 1}, Counter(Python=10), {})
             self.assertEqual(readme.read_bytes(), after)
 
     def test_bad_markers_do_not_overwrite_existing_cards(self):

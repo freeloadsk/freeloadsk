@@ -87,7 +87,6 @@ def collect(login, token, now=None, request=graphql):
         raise RuntimeError("GitHub profile was not found.")
     activity = user["contributionsCollection"]
     stats = {
-        "Repositories": 0,
         "Stars earned": 0,
         "Commits (365 days)": activity["totalCommitContributions"],
         "Pull requests (365 days)": activity["totalPullRequestContributions"],
@@ -100,7 +99,6 @@ def collect(login, token, now=None, request=graphql):
         data = request(token, REPOSITORIES_QUERY, {"login": login, "cursor": cursor})
         repositories = data["user"]["repositories"]
         for repo in repositories["nodes"]:
-            stats["Repositories"] += 1
             # Forks do not represent the profile owner's original code.
             if repo["isFork"]:
                 continue
