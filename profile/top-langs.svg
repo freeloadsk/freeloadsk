@@ -15,19 +15,19 @@
   <text x="24" y="90">Python</text>
   <text x="456" y="90" text-anchor="end" class="value">92.0%</text>
   <rect x="24" y="98" width="432" height="5" rx="2.5" fill="var(--track)"/>
-  <rect x="24" y="98" width="397.60" height="5" rx="2.5" fill="#3572A5"/>
+  <rect x="24" y="98" width="397.38" height="5" rx="2.5" fill="#3572A5"/>
   <text x="24" y="122">JavaScript</text>
   <text x="456" y="122" text-anchor="end" class="value">5.8%</text>
   <rect x="24" y="130" width="432" height="5" rx="2.5" fill="var(--track)"/>
-  <rect x="24" y="130" width="24.87" height="5" rx="2.5" fill="#f1e05a"/>
+  <rect x="24" y="130" width="25.03" height="5" rx="2.5" fill="#f1e05a"/>
   <text x="24" y="154">CSS</text>
-  <text x="456" y="154" text-anchor="end" class="value">1.4%</text>
+  <text x="456" y="154" text-anchor="end" class="value">1.5%</text>
   <rect x="24" y="162" width="432" height="5" rx="2.5" fill="var(--track)"/>
-  <rect x="24" y="162" width="6.26" height="5" rx="2.5" fill="#663399"/>
+  <rect x="24" y="162" width="6.30" height="5" rx="2.5" fill="#663399"/>
   <text x="24" y="186">HTML</text>
   <text x="456" y="186" text-anchor="end" class="value">0.7%</text>
   <rect x="24" y="194" width="432" height="5" rx="2.5" fill="var(--track)"/>
-  <rect x="24" y="194" width="3.02" height="5" rx="2.5" fill="#e34c26"/>
+  <rect x="24" y="194" width="3.04" height="5" rx="2.5" fill="#e34c26"/>
   <text x="24" y="218">Dockerfile</text>
   <text x="456" y="218" text-anchor="end" class="value">0.1%</text>
   <rect x="24" y="226" width="432" height="5" rx="2.5" fill="var(--track)"/>
